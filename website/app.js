@@ -62,7 +62,7 @@ const UpdateUI = async ()=> {
     try{
         const alldata = await request.json();
         document.getElementById('date').innerHTML =alldata.date;
-        document.getElementById('temp').innerHTML = alldata.temperature;
+        document.getElementById('temp').innerHTML = alldata.temp;
         document.getElementById('content').innerHTML =alldata.content;
     }catch(error) {
         console.log('There Is An Error' , error)
