@@ -33,18 +33,16 @@ function listening() {
 app.get('/getData' ,getData);
 function getData(req , res) {
     res.send(projectData);
-    projectData = [];
 }
 
 app.post('/addData' , addData);
-console.log(req.body);
 function addData(req , res) {
     EntryData={
         date: req.body.date,
         temp: req.body.temp,
         content: req.body.content
     }
-    projectData.push(EntryData);
+    projectData=EntryData;
 }
     
 
